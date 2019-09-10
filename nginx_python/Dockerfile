@@ -20,5 +20,5 @@ COPY etc/supervisord.conf /etc/supervisord.conf
 EXPOSE 8080
 
 #COPY nginx/sites-available /etc/nginx/sites-available
-ENTRYPOINT ["/usr/local/bin/supervisord"]
+CMD ["supervisord", "-c", "/etc/supervisord.conf"]
 
